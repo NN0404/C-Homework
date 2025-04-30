@@ -16,7 +16,7 @@ int main(void) {
                 printf("Phan tu a[%d][%d] la: ",j,k);
                 scanf("%d",&a[j][k]);
             }
-        }
+        } 
 printf("\n");
     //nhap ma tran B
     puts("Ma tran B");
