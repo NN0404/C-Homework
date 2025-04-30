@@ -3,7 +3,7 @@
 int main(void) {
     int j,k,r,t,m,n,p,q;
     int a[50][50],b[50][50],c[50][50];
-
+ 
     //nhap ma tran A
     puts("Ma tran A");
     puts("Nhap so hang m: ");
