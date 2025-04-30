@@ -3,7 +3,7 @@ void main(){
 	int n,r,row,space,ncr;
 	puts("Nhap so row: ");
 	scanf("%d",&row);
-
+ 
 for(n=0;n<row;n++){
 	for(space=1;space<row-n;space++){
 		printf(" ");
