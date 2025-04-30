@@ -2,7 +2,7 @@
 
 int max=0, min=0;
 
-
+ 
 int main (){
 	int m,n,i,j,a[50][50],c,d;
 	puts("Your m arrow value: ");
