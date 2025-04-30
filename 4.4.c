@@ -31,7 +31,7 @@ printf("\n");
             scanf("%d",&b[j][k]);
         }
     }
-
+ 
     if (n==q && m==p) {
         puts("Phep cong ma tran A + B la: \n");
         for (j=1;j<=m;j++) {
