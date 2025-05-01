@@ -1,0 +1,12 @@
+for a long long /int/short to a 5 numbers
+  // Simulated base address
+    uintptr_t base_address = 93824;
+
+    printf("Simulated addresses:\n");
+    for (i = 1; i <= m; i++) {
+        for (j = 1; j <= n; j++) {
+            uintptr_t simulated_address = base_address + ((i - 1) * n + (j - 1)) * sizeof(int);
+            printf("%lu ", simulated_address); // Print the simulated address
+        }
+        printf("\n");
+    }
