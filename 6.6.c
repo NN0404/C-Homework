@@ -21,7 +21,9 @@ int main() {
     printf("Enter how many numbers: ");
     scanf("%d", &n);
 
-    int arr[n];  // Create an array to store the numbers
+    /*int arr[n];  // Create an array to store the numbers
+    or doing memory allocation */
+    int* arr = (int *)malloc( n * sizeof(int));
 
     // Get numbers from the user
     printf("Enter %d numbers:\n", n);
