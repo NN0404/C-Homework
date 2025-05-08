@@ -25,6 +25,12 @@ int main() {
     or doing memory allocation */
     int* arr = (int *)malloc( n * sizeof(int));
 
+    // Check if memory allocation was successful
+    if (arr == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;  // Exit program
+    }
+
     // Get numbers from the user
     printf("Enter %d numbers:\n", n);
     for (int i = 0; i < n; i++) {
