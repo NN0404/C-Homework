@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+#define MAX_CHAR 256
+
+int main() {
+    char str[MAX_CHAR], trs[MAX_CHAR];
+
+    puts("Your text: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Convert to lowercase and remove newline
+    size_t n = strlen(str); // Get string length
+    if (str[n - 1] == '\n') {
+        str[n - 1] = '\0'; // Remove newline
+        n--; // Adjust length
+    }
+
+    for (size_t i = 0; i < n; i++) {
+        str[i] = tolower((unsigned char)str[i]); // Convert to lowercase
+    }
+
+    // Reverse the string
+    for (size_t i = 0; i < n; i++) {
+        trs[i] = str[n - 1 - i]; // Reverse placement
+    }
+    trs[n] = '\0'; // Null-terminate reversed string
+
+    // Compare original and reversed
+    puts(strcmp(str, trs) == 0 ? "YES" : "NO");
+
+    return 0;
+}
