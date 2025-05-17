@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char line[256];
+
+    printf("Enter the string:\n");
+    if (fgets(line, sizeof(line), stdin)) {
+        // Remove trailing newline, if present
+        size_t len = strlen(line);
+        if (len > 0 && line[len - 1] == '\n') {
+            line[len - 1] = '\0';
+        }
+
+        char *curr = line;
+        char *next;
+
+        while ((next = strchr(curr, ' ')) != NULL) {
+            // Skip extra spaces
+            while (*next == ' ') {
+                *next = '\0';  // Replace space with NULL terminator
+                next++;
+            }
+
+            printf("%s\n", curr);
+            curr = next;
+        }
+
+        // Print last word (if any)
+        if (*curr) {
+            printf("%s\n", curr);
+        }
+    }
+    return 0;
+}
