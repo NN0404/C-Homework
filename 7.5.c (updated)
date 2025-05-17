@@ -33,3 +33,4 @@ int main(void) {
     }
     return 0;
 }
+//https://stackoverflow.com/questions/42462287/split-a-string-and-print-out-each-word?rq=3
